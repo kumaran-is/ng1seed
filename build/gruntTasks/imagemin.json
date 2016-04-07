@@ -1,0 +1,15 @@
+{
+  "options": {
+    "optimizationLevel": 3,
+    "progressive": true,
+    "interlaced": true
+  },
+  "files": {
+    "expand": true,
+    "cwd": "<%= cfg.path.srcImages %>",
+    "src": [
+      "**/*.{png,jpg,gif,jpeg,svg,bmp}"
+    ],
+    "dest": "<%= cfg.path.distImages %>"
+  }
+}

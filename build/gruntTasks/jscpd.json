@@ -1,0 +1,6 @@
+{
+   "javascript": {
+        "path": "<%= cfg.path.srcJS %>/",
+        "output": "<%= cfg.path.distJscpdReports %>/jscpd.xml"
+    }
+}

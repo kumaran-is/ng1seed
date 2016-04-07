@@ -1,0 +1,30 @@
+{
+  "options": {
+    "mode": "gzip",
+    "pretty": true
+  },
+  "scripts": {
+    "expand": true,
+    "cwd": "<%= cfg.path.distJS %>",
+    "src": [
+      "**/*.min.js"
+    ],
+    "dest": "<%= cfg.path.distJS %>"
+  },
+  "stylesheets": {
+    "expand": true,
+    "cwd": "<%= cfg.path.distStyles %>",
+    "src": [
+      "**/*.min.css"
+    ],
+    "dest": "<%= cfg.path.distStyles %>"
+  },
+  "vendor": {
+    "expand": true,
+    "cwd": "<%= cfg.path.distVendor %>",
+    "src": [
+      "**/*"
+    ],
+    "dest": "<%= cfg.path.distVendor %>"
+  }
+}

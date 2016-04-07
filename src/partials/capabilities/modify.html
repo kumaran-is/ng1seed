@@ -1,0 +1,102 @@
+  <section >
+
+      <div >
+      <div> 
+        <div ng-show="successMsg"  class="nga-default nga-stagger nga-rotate-up" >
+          <h4 class="alert alert-success alert-dismissible" >
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+              {{successMsg}}
+          </h4>
+        </div>
+        <div ng-show="errMsg"  class="nga-default nga-stagger nga-rotate-up" >
+          <h4 class="alert alert-danger alert-dismissible" >
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+              {{errMsg}}
+          </h4>
+        </div>
+      </div>
+    </div>
+       
+    <div>
+      <div> 
+        <h2 class="topic">{{'MODIFY' | translate}}</h2> 
+      </div>
+    </div>
+    <div>
+      <div>&nbsp;</div>
+    </div>    
+    <div>
+      <div> 
+      </div>
+    </div>    
+
+    <div ng-hide="errMsg"> 
+        <div>
+            <div> 
+            <table class="table table-stripped">
+              <thead>
+                  <tr>
+                    <th>{{'SNO_LBL' | translate}}</th>
+                    <th>{{'NAME_LBL' | translate}}</th>
+                    <th>{{'DESCRIPTION_LBL' | translate}}</th>
+                    <th>{{'STATUS_LBL' | translate}}</th>
+                    <th>{{'ACTION_LBL' | translate}}</th>    
+                  </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="feature in features" ng-switch="feature.mode" >   
+                    <td ng-switch-default="1" >{{$index + 1}}</td>             
+                    <td ng-switch-default="1" ><p ng-bind-html="feature.name"></p></td>
+                    <td ng-switch-default="1" ><p ng-bind-html="feature.Description"></p></td>
+                    <td ng-switch-default="1" >{{feature.Status}}</td>
+                    <td ng-switch-default="1" >
+                        <button class="btn btn-info" ng-click="editFeature(feature)"> <span class="glyphicon glyphicon-edit"></span>{{'EDIT_LBL' | translate}}</button>
+                        &nbsp;
+                    </td>
+
+            <!-- edit mode starts -->
+
+                    <td ng-switch-when="editmode" colspan="5" > 
+                      <form  role="form" name="updateForm"  novalidate="1" >
+                      <div class="form-group" >
+                        <div >  
+                          <input type="text" class="form-control" name="name" required  size="30" ng-model="feature.name" ng-pattern="/^[a-zA-Z ]+$/" ng-maxlength="30" placeholder="{{'NAME_LBL' | translate}}"  /> 
+                          <div ng-messages="updateForm.name.$error" ng-if="updateForm.name.$dirty" ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+                            <div ng-message="required">{{'NAME_REQUIRED' | translate}}</div>
+                          </div>
+                        </div>  
+                      </div>
+                      <div class="form-group" >
+                        <div > 
+                          <input type="text" class="form-control" name="description" size="100" required ng-model="feature.Description" ng-maxlength="100" placeholder="{{'DESCRIPTION_LBL'|translate}}"  /> 
+                          <div ng-messages="updateForm.description.$error" ng-if="updateForm.description.$dirty"   ng-messages-include="partials/error/validationMessages.html"  class="error-messages" >
+                            <div ng-message="required">{{'DESCRIPTION_REQUIRED' | translate}}</div>
+                          </div>
+                        </div>   
+                      </div>
+                      <div class="form-group" >
+                        <div>
+                          <div class="btn-group">
+                            <select  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-init="feature.Status" name="status" ng-model="feature.Status" ng-options=" 'Status.' + s | translate for s in updateStatus" ></select>
+                          </div>
+                        </div>
+                      </div>  
+                      <div>
+                          <button type="submit" ng-click="update(feature)" value="Modify" class="btn btn-success" ng-disabled="updateForm.$invalid"><span class="glyphicon glyphicon-save"></span>{{'MODIFY'|translate}}</button>
+                          <input type="button" class="btn btn-danger" ng-click="cancel(feature)" value="{{'CANCEL'|translate}}" />
+                      </div>  
+                      </form>
+                    </td>
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+      </div>
+    </div>
+  </section>  

@@ -1,0 +1,25 @@
+{
+  "e2etestxmlreports": {
+    "options": {
+      "create": [
+        "<%= cfg.path.distE2EReports %>/xml/chrome",
+        "<%= cfg.path.distE2EReports %>/xml/safari",
+        "<%= cfg.path.distE2EReports %>/xml/firefox"
+      ]
+    }
+  },
+  "e2ecoveragexmlreports": {
+    "options": {
+      "create": [
+        "<%= cfg.path.distE2ECoverageReports %>/xml/chrome"
+      ]
+    }
+  },
+  "jscpdreports": {
+    "options": {
+      "create": [
+        "<%= cfg.path.distJscpdReports %>"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "dist": {
+    "options": {
+      "ignore":[".error-messages.ng-active",".error-messages.ng-active:after",".ng-dirty.ng-invalid",".error-messages.ng-enter-stagger",".error-messages.ng-enter",".error-messages.left.ng-enter",".error-messages.right.ng-enter",".error-messages.ng-enter-active"],
+      "stylesheets": [
+        "../<%= cfg.path.vendor%>/bootstrap/bootstrap.css",
+         "../<%= cfg.path.vendor%>/ng-animate-css/nga.css",
+        "styles/responsive.css",
+        "styles/base.css"
+      ],
+      "ignoreSheets": [
+        "../<%= cfg.path.vendor%>/toastr/toastr.css"
+      ],
+      "report": "gzip"
+    },
+    "files": {
+      "<%= cfg.path.distStyles %>/<%= pkg.name %>.css": [
+        "<%= cfg.path.src %>/index.html",
+        "<%= cfg.path.srcPartial %>/**/*.html"
+      ]
+    }
+  }
+}

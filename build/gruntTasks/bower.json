@@ -1,0 +1,14 @@
+{
+
+  "install": {
+      "options": {
+          "targetDir": "./vendor",
+          "install": true,
+          "verbose": true,
+          "cleanTargetDir": true,
+          "cleanBowerDir": true,
+          "bowerOptions": {}
+      }
+  }
+
+}

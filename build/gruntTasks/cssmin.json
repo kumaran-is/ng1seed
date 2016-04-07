@@ -1,0 +1,17 @@
+{
+  "options": {
+    "keepSpecialComments": 0,
+    "banner": "/*! <%= pkg.name %>_v<%= pkg.version %> - <%= grunt.template.today(\"mm-dd-yyyy\") %> */\n",
+    "report": "gzip"
+  },
+  "files": {
+    "expand": true,
+    "cwd": "<%= cfg.path.distStyles %>",
+    "src": [
+      "**/*.css",
+      "!**/*.min.css"
+    ],
+    "dest": "<%= cfg.path.distStyles %>",
+    "ext": ".min.css"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "options": {
+    "keepAlive": true
+  },
+  "e2e": {
+    "configFile": "<%= cfg.path.buildE2E %>/protractor-conf.js"
+  }
+}

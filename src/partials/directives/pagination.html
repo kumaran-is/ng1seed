@@ -1,0 +1,36 @@
+<div>
+	<div ng-if="paginator.hasRecords()" class="paginator">
+		<div>
+			<div class="pageInfo" style="" ng-bind="paginator.pagInfo()"></div>
+			<div class="pageNavigator">
+				<div class="pageSize">
+					Page Size: {{paginator.pageSize}}
+				</div>
+				<div>
+					<button class="btn btn-primary" ng-show="paginator.hasPrevious()" ng-click="paginator.previous()"></button>
+				</div>
+				<div> 
+					<button class="btn btn-primary" ng-show="paginator.hasNext()" ng-click="paginator.next()"></button>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th ng-if="paginator.includeRowIndex">S.No</th>
+					<th ng-repeat="header in paginator.displayHeaders">{{header}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in paginator.items">
+					<td ng-if="paginator.includeRowIndex">{{paginator.getRowIndex($index)}}</td>
+					<td ng-repeat="key in paginator.objectKeys">{{item[key]}}</td>
+				</tr>
+			</tbody>	
+		</table>
+	</div>
+	<div ng-if="!paginator.hasRecords()">
+		No Records found!!
+	</div>
+</div>

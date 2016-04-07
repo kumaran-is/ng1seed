@@ -1,0 +1,23 @@
+{
+  "options": {
+    "csslintrc": "<%= cfg.path.buildCsslint %>/.csslintrc",
+    "absoluteFilePathsForFormatters": true,
+    "formatters": [
+      {
+        "id": "csslint-xml",
+        "dest": "<%= cfg.path.distReports %>/csslint/csslint.xml"
+      },
+      {
+        "id": "checkstyle-xml",
+        "dest": "<%= cfg.path.distReports %>/csslint/csslint_checkstyle.xml"
+      },
+      {
+        "id": "junit-xml",
+        "dest": "<%= cfg.path.distReports %>/csslint/csslint_junit.xml"
+      }
+    ]
+  },
+  "src": [
+    "<%= cfg.path.srcStyles %>/**/*.css"
+  ]
+}

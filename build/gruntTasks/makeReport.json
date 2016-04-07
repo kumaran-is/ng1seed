@@ -1,0 +1,9 @@
+{
+  "src": "<%= cfg.path.distReports %>/<%= cfg.path.testingE2ECoverage %>/coverage/json/*.json",
+"options": {
+    "type":["lcov","cobertura"],
+    "dir": "<%= cfg.path.distReports %>/<%= cfg.path.testingE2ECoverage %>/coverage/report",
+    "print": "detail"
+  }
+ 
+}

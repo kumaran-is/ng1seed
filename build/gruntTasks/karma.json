@@ -1,0 +1,5 @@
+{
+  "unit": {
+    "configFile": "<%= cfg.path.buildUnit %>/karmaMainConfig.js"
+  }
+}

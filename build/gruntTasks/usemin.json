@@ -1,0 +1,5 @@
+{
+  "html": [
+    "<%= cfg.path.distSrc %>/index.html"
+  ]
+}

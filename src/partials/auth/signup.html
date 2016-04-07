@@ -1,0 +1,81 @@
+<section>
+
+  <div >
+    <div> 
+      <div ng-show="errMsg"  class="nga-default nga-stagger nga-rotate-up" >
+        <h4 class="alert alert-danger alert-dismissible" >
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          {{errMsg | translate }}
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div> 
+      <h3 class="topic">{{'SIGNUP_TITLE' | translate}}</h3> 
+  </div>
+  <form  role="form"  name="signupForm" >
+    
+    <div class="form-group  ">
+      <input type="text" class="form-control" id="firstName" name="firstName" required ng-model="credentials.firstName" size="30" ng-pattern="/^(\D)+$/" ng-maxlength="30" placeholder="{{'FIRSTNAME_LBL' | translate}}" /> 
+      <div ng-messages="signupForm.firstName.$error" ng-if="signupForm.firstName.$dirty" ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+        <div ng-message="required">{{'FIRSTNAME_REQUIRED' | translate}}</div>
+      </div>
+    </div>
+
+    <div class="form-group  ">
+      <input type="text" class="form-control" id="lastName2" name="lastName" ng-model="credentials.lastName" size="30" ng-pattern="/^(\D)+$/" ng-maxlength="30" placeholder="{{'LASTNAME_LBL' | translate}}" />
+      <div ng-messages="signupForm.lastName.$error" ng-if="signupForm.lastName.$dirty" ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+      </div>
+     </div>
+    
+    <div class="form-group  ">
+      <input type="text" class="form-control" id="username" name="username" required ng-model="credentials.userName" size="30" ng-pattern="/^(\D)+$/" ng-maxlength="30" placeholder="{{'USERNAME_LBL' | translate}}" />
+       <div ng-messages="signupForm.username.$error" ng-if="signupForm.username.$dirty" ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+        <div ng-message="required">{{'USERNAME_REQUIRED' | translate}}</div>
+      </div>
+    </div>
+
+    <div class="form-group  ">
+      <input type="email" class="form-control" id="email"  name="email" required ng-model="credentials.email" size="30" placeholder="{{'EMAIL_LBL' | translate}}" >
+      <div ng-messages="signupForm.email.$error" ng-if="signupForm.email.$dirty" ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+        <div ng-message="required">{{'EMAIL_REQUIRED' | translate}}</div>
+      </div>
+    </div>
+
+    <div class="form-group  ">
+      <input type="password" class="form-control" id="password1" name="password1" required ng-model="credentials.password1"  placeholder="{{'PASSWORD_LBL'|translate}}" />
+      <div ng-messages="signupForm.password1.$error" ng-if="signupForm.password1.$dirty" ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+        <div ng-message="required">{{'PASSWORD_REQUIRED' | translate}}</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="password" class="form-control" id="password2" name="password2" required ng-model="credentials.password2" pw-check="password1" placeholder="{{'CONFIRMPASSWORD_LBL' | translate}}" />
+      <div ng-messages="signupForm.password2.$error" ng-if="signupForm.password2.$dirty" ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+        <div ng-message="required">{{'PASSWORD_REQUIRED' | translate}}</div>
+      </div>
+    </div>  
+
+    <div class="radio" >
+      <label class="radio-inline" >
+        <input class="radio_buttons required inline" name="genderRadios" ng-model="credentials.gender" id="male" type="radio" value="Male" required />{{'MALE_LBL'|translate}}
+      </label>
+      <label class="radio-inline" >
+        <input class="radio_buttons required inline" name="genderRadios" ng-model="credentials.gender" id="female"  type="radio" value="Female"  required />{{'FEMALE_LBL'|translate}}
+      </label>
+    </div>
+    <div ng-messages="signupForm.genderRadioGroup.$error" ng-if="signupForm.genderRadioGroup.$dirty"  ng-messages-include="partials/error/validationMessages.html"  class="error-messages"  >
+        <div ng-message="required">{{'GENDER_REQUIRED' | translate}}</div>
+    </div>
+    
+    <button type="button" ng-click="regUser()" class="btn btn-primary" ng-disabled="signupForm.$invalid" >{{'SUBMIT_LBL'|translate}}</button>
+
+    <button type="reset" class="btn btn-primary">{{'RESET_LBL'|translate}}</button>
+    
+    <a  ui-sref="loginPageState"  >{{'LOGIN_LNK'|translate}}</a>
+  </form>
+</section>

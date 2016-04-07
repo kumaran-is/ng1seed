@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Conditional commenting only evaluat-able by Internet Explorer browsers. This allows for specifying CSS fixes for specific legacy versions of IE. The “.no-js” class can be used to specify custom styles when JavaScript is disabled. -->
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<!-- if the charset isn’t declared within the first 512 bytes of your HTML document, your site is vulnerable to malicious code and hijacking! -->	
+<meta charset="utf-8"/>
+<!-- Always force latest IE rendering engine & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<!-- To tell mobile or tablet browser that i am designed for mobile screens too (Using RWD) so render me differently -->
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="author" content="Your name"/>
+<meta name="description" content="Place your description here"/>
+<meta name="keywords" content="Your keywords"/>
+<title>Angular Seed Project v3.2.0</title>
+<!--if someone bookmarks your website (ie puts it in their "Favorites" menu), it associates a particular icon with your website in the bookmark. It tries to obtain that icon by first requesting for "favicon.ico" Not having a favicon.ico file in your root will cause a lot of 404 errors. -->
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!-- Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing. -->
+<link rel="stylesheet" href="../vendor/normalize.css/normalize.css?bust=@@revision"  />
+<!-- Modernizr, helps older browsers handle HTML5 elements; therefore, it must load before any HTML5-specific code can be read. -->
+<script src="../vendor/modernizr/modernizr.js"></script>
+<link rel="stylesheet" href="../vendor/toastr/toastr.min.css?bust=@@revision"  />
+<link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css?bust=@@revision"/>
+<link rel="stylesheet" href="../vendor/ng-animate-css/nga.min.css?bust=@@revision" />
+<!-- build:css  styles/angularSeedProject.min.css?bust=@@revision  -->
+<link rel="stylesheet" href="styles/responsive.css?bust=@@revision"  />
+<link rel="stylesheet" href="styles/base.css?bust=@@revision" />
+<!-- endbuild -->
+
+
+<!-- To enable styling of HTML5 elements & mediaqueries in IE8 and below version -->
+<!--[if lt IE 9]>
+<script src="../vendor/html5shiv/html5shiv.js"></script>
+<script src="../vendor/respond/respond.min.js"></script>
+<![endif]-->
+</head>
+<script  >
+/* Cache buster :To invalidate the browser cache whenever new version is released .It forces the browser to fetch latest files from the server instead of from cache.
+*/ 
+var require={
+	urlArgs: 'bust=@@revision'
+};
+</script>
+
+<body ng-cloak class="ng-cloak"  >
+<!-- Kindly inform your site visitor that their choice of browser is outdated -->	
+  <!--[if lt IE 7]>
+   		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please upgrade your browser</a> to improve your experience. </p>
+  <![endif]-->
+
+<!-- Region to add your site or application content -->
+<div ui-view class="container"></div>
+<script data-main="js/mainConfig"  src="../vendor/requirejs/require.js" ></script>
+</body>
+</html>

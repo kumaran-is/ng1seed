@@ -1,0 +1,22 @@
+{
+  "options": {
+    "locations": [
+      "Tokyo",
+      "SanJose_IE9"
+    ]
+  },
+  "dev": {
+    "options": {
+       "urls": [
+      "<%= cfg.server.perfBenchMarkHost %>/index.html#/seed/home",
+      "<%= cfg.server.perfBenchMarkHost %>/index.html#/seed/login",
+      "<%= cfg.server.perfBenchMarkHost %>/index.html#/seed/signup",
+      "<%= cfg.server.perfBenchMarkHost %>/index.html#/seed/list",
+      "<%= cfg.server.perfBenchMarkHost %>/index.html#/seed/add",
+      "<%= cfg.server.perfBenchMarkHost %>/index.html#/seed/modify",
+      "<%= cfg.server.perfBenchMarkHost %>/index.html#/seed/remove"
+      ]
+    },
+    "dest": "<%= cfg.path.distPerfBenchMarkReports %>/webpagetest/"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "html": "<%= cfg.path.src %>/index.html",
+  "options": {
+    "dest": "<%= cfg.path.distSrc %>"
+  }
+}

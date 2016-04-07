@@ -1,0 +1,21 @@
+﻿<ul class="nav navbar-nav navbar-right">
+    <li>
+        <div class="nga-default nga-stagger nga-rotate-up" ng-show="authenticated" style="padding-top:14.5px;padding-bottom: 14.5px;" ng-class="{active: isActive('/{{menu.item}}')}">{{'WELCOME_USER' | translate}}, {{ currentUser }}!</div>
+    </li>
+    <li>
+        <a  ui-sref="homePageState" ng-show="authenticated" ng-click="logout()" ng-class="{active: isActive('/{{menu.item}}')}"><span class="glyphicon glyphicon-log-out"></span>{{'LOGOUT_LBL' | translate}}</a>
+    </li>    
+    <li ng-model="signupRef" ng-hide="authenticated" class="nga-default nga-stagger nga-rotate-up" ng-class="{active: isActive('/signup')}">
+        <a ui-sref="signupPageState">{{'SIGNUP_LBL' | translate}}</a>
+    </li>
+    <li ng-model="loginRef" ng-hide="authenticated" class="nga-default nga-stagger nga-rotate-up" ng-class="{active: isActive('/login')}">
+        <a ui-sref="loginPageState" >{{'LOGIN_LBL' | translate}}</a>
+    </li>
+      <li>
+        <div class="btn-toolbar">    
+            <select ng-model="selectedLanguage" ng-change="changeLanguage()" 
+                ng-options="language.value as language.name for language in languages">
+            </select>
+        </div>
+    </li>
+</ul>

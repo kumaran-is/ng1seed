@@ -1,0 +1,18 @@
+{
+  "options": {
+    "angular": true,
+    "customtags": [],
+    "customattrs": [],
+    "output":"html",
+    "relaxerror": [
+      "The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment."
+    ],
+    "reportpath": "<%= cfg.path.distReports %>/htmlAngularValidator/html-angular-validate-report.json"
+  },
+  "files": {
+    "src": [
+      "<%= cfg.path.src %>/index.html",
+      "<%= cfg.path.srcPartial %>/**/*.html"
+    ]
+  }
+}

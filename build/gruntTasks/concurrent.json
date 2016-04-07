@@ -1,0 +1,21 @@
+{
+  "staticCodeAnalyzer": [
+    "csslint",
+    "jshint",
+    "jscs",
+	  "jscpd"
+  ],
+   "htmlStaticValidators": [
+    "htmlangular",
+    "htmlhint"
+  ],
+  "qualityReports": [
+    "plato"
+  ],
+  "jsdocs": [
+    "ngdocs"
+  ],
+  "perfMetrics": [
+    "yslow_test"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+   "options": {
+    "htmlhintrc": "<%= cfg.path.buildHtmlhint %>/.htmlhintrc"
+   },
+   "files": {
+   		"src": [
+      				"<%= cfg.path.src %>/index.html",
+      				"<%= cfg.path.srcPartial %>/**/*.html"
+    	]
+  	}
+}

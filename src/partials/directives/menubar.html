@@ -1,0 +1,8 @@
+﻿<section>
+    <ul class="nav navbar-nav" ng-show="authenticated"  >
+        <li ng-repeat="menu in menus"  ng-class="{active: isActive('/{{menu.item}}')}">
+        <!--  ng-model="{{menu.item}}Ref" ng-class="{active: isActive('/{{menu.item}}')}"> -->
+        	<a ui-sref="{{ menu.url.route }}">{{'Menu.'+menu.label | translate}}</a>
+        </li>
+    </ul>
+</section>

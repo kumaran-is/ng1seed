@@ -1,0 +1,102 @@
+{
+  "vendor": {
+    "files": [
+      {
+        "expand": true,
+        "src": [
+          "<%= cfg.path.vendor %>/**/*"
+        ],
+        "dest": "<%= cfg.path.dist %>"
+      }
+    ]
+  },
+  "fonts": {
+    "expand": true,
+    "flatten":true,
+    "src": "<%= cfg.path.vendorFonts %>/*.*", 
+    "dest": "<%= cfg.path.distFonts  %>/"
+  },
+  "scripts": {
+    "files": [
+      {
+        "expand": true,
+        "src": [
+          "<%= cfg.path.srcJS %>/**/*.js"
+        ],
+        "dest": "<%= cfg.path.dist %>"
+      }
+    ]
+  },
+  "stylesheets": {
+    "files": [
+      {
+        "expand": true,
+        "src": [
+          "<%= cfg.path.srcStyles %>/**/*.css"
+        ],
+        "dest": "<%= cfg.path.dist %>"
+      }
+    ]
+  },
+  "images": {
+    "files": [
+      {
+        "expand": true,
+        "src": [
+          "<%= cfg.path.srcImages %>/**/*"
+        ],
+        "dest": "<%= cfg.path.dist %>"
+      }
+    ]
+  },
+  "favicon": {
+    "files": [
+      {
+        "expand": true,
+        "src": [
+          "<%= cfg.path.src %>/favicon.ico"
+        ],
+        "dest": "<%= cfg.path.dist %>"
+      }
+    ]
+  },
+  "html": {
+    "files": [
+      {
+        "expand": true,
+        "src": [
+          "<%= cfg.path.src %>/index.html"
+        ],
+        "dest": "<%= cfg.path.dist %>"
+      }
+    ]
+  },
+  "partials": {
+    "files": [
+      {
+        "expand": true,
+        "src": [
+          "<%= cfg.path.srcPartial %>/**/*.html"
+        ],
+        "dest": "<%= cfg.path.dist %>"
+      }
+    ]
+  },
+  "coverageE2E": {
+    "files": [
+      {
+        "expand": true,
+        "dot": true,
+        "cwd": "<%= cfg.path.dist %>",
+        "dest": "<%= cfg.path.distInstrumented %>/dist",
+        "src": [
+          "<%= cfg.path.srcPartial %>/**/*",
+          "<%= cfg.path.srcStyles %>/**/*",
+          "<%= cfg.path.srcImages %>/**/*",
+          "<%= cfg.path.src %>/index.html",
+          "<%= cfg.path.vendor %>/**/*"
+        ]
+      }
+    ]
+  }
+}

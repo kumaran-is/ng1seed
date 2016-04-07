@@ -1,0 +1,63 @@
+<section> 
+
+    <div >
+      <div> 
+        <div ng-show="successMsg"  class="nga-default nga-stagger nga-rotate-up" >
+          <h4 class="alert alert-success alert-dismissible" >
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+              {{successMsg}}
+          </h4>
+        </div>
+        <div ng-show="errMsg"  class="nga-default nga-stagger nga-rotate-up" >
+          <h4 class="alert alert-danger alert-dismissible" >
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+              {{errMsg}}
+          </h4>
+        </div>
+      </div>
+    </div>
+
+  <div>
+    <div> 
+      <h2 class="topic">{{'REMOVE_LBL' | translate}}</h2> 
+    </div>
+  </div>   
+  <div>
+    <div> 
+    </div>
+  </div>      
+  <div ng-hide="errMsg"> 
+      <div>
+          <div> 
+            <table class="table table-stripped">
+              <thead>
+                  <tr>
+                    <th>{{'SNO_LBL' | translate}}</th>
+                    <th>{{'NAME_LBL' | translate}}</th>
+                    <th>{{'DESCRIPTION_LBL' | translate}}</th>
+                    <th>{{'STATUS_LBL' | translate}}</th>
+                    <th>{{'ACTION_LBL' | translate}}</th>     
+                  </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="feature in features" ng-switch="feature.mode" class="nga-default nga-stagger nga-rotate-up" >   
+                    <td >{{$index + 1}}</td>             
+                    <td ><p ng-bind-html="feature.name"></p></td>
+                    <td ><p ng-bind-html="feature.Description"></p></td>
+                    <td >{{feature.Status}}</td>
+                    <td >
+                        <button class="btn btn-danger" ng-click="delete(feature)"><span class="glyphicon glyphicon-remove"></span>{{'DELETE_LBL' | translate}}</button>
+                    </td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+    </div>
+  </div >
+</section>

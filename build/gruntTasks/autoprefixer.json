@@ -1,0 +1,13 @@
+{
+  "options": {
+    "browsers": [
+      "> 1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "Opera 12.1"
+    ]
+  },
+  "files": {
+    "src": "<%= cfg.path.distStyles %>/<%= pkg.name %>.css"
+  }
+}

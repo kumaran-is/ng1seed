@@ -1,0 +1,38 @@
+{
+  "name": "angular-aop",
+  "main": "index.js",
+  "version": "0.2.1",
+  "homepage": "https://github.com/mgechev/angular-aop",
+  "authors": [
+    "mgechev <mgechev@gmail.com>"
+  ],
+  "description": "Micro-framework for aspect-oriented programming with AngularJS",
+  "keywords": [
+    "aspect-oriented",
+    "programming",
+    "aop",
+    "AngularJS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.2.0",
+    "jasmine": "~2.2.1"
+  },
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.1",
+    "commit": "d7cb14f131a28ccbff70da9739f9f6ebae55193b"
+  },
+  "_source": "git://github.com/mgechev/angular-aop.git",
+  "_target": "~0.2.0",
+  "_originalSource": "angular-aop"
+}

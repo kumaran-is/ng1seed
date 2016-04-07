@@ -1,0 +1,12 @@
+{
+  "release": {
+    "options": {
+      "update": {
+        "selector": "script[data-main]",
+        "attribute": "data-main",
+        "value": "js/<%= pkg.name %>.min"
+      }
+    },
+    "src": "<%= cfg.path.distSrc %>/index.html"
+  }
+}

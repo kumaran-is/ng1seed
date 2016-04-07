@@ -1,0 +1,9 @@
+{
+  "options": {
+    "coverageDir": "<%= cfg.path.distReports %>/<%= cfg.path.testingE2ECoverage %>/coverage/json",
+    "keepAlive": true
+  },
+  "e2ecoverage": {
+    "configFile": "<%= cfg.path.buildE2E %>/protractor-withcodecoverage-conf.js"
+  }
+}
